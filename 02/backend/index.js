@@ -3,7 +3,7 @@ import express from 'express';  //module variant
 
 const app = express();
 
-app.get('/jokes', (req, res) => {
+app.get('/api/jokes', (req, res) => {
     const jokes = [
   {
     id: 1,
@@ -37,5 +37,5 @@ app.get('/jokes', (req, res) => {
 const port = process.env.PORT || 4000; //for prod always use env never use or
 
 app.listen(port, () => {
-    console.log(`Serving at https://localhost/${port}`)
+    console.log(`Serving at http://localhost:${port}`)
 })
